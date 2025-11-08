@@ -1,0 +1,59 @@
+.Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 40;
+
+  .logo {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+     .suleyman{
+      color: rgb(122, 6, 138);
+    }
+
+    .the {
+        font-size: 12px;
+        color: gold;
+    }
+
+    .magn {
+      color: rgb(30, 30, 226);
+    }
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-family: cursive;
+    padding: 10px;
+    z-index: 50;
+
+    div {
+      transition: .3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:active {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .rightNav {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+
+    .menu {
+        cursor: pointer;
+    }
+  }
+}

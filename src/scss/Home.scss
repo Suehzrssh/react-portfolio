@@ -1,0 +1,92 @@
+.Home {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+  overflow: visible; 
+
+  .Hero {
+    width: 100%;
+    height: 78vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 70px;
+
+    .up {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      .viewBtn {
+        margin-top: 10px;
+        background-color: rgb(46, 46, 228);
+        color: white;
+        padding: 5px 25px;
+        text-transform: capitalize;
+        border-radius: 20px;
+        transition: .3s;
+
+        &:hover {
+          background-color: rgb(23, 23, 216);
+        }
+      }
+
+      .name {
+        color: rgb(46, 46, 228);
+        font-family: "Great Vibes", cursive;
+        font-weight: 500;
+        font-size: 44px;
+      }
+
+      .hand {
+        display: inline-block;
+        animation: wave 1.5s infinite ease-in-out;
+        transform-origin: 70% 70%;
+      }
+
+      @keyframes wave {
+        0% { transform: rotate(0deg); }
+        20% { transform: rotate(20deg); }
+        40% { transform: rotate(-15deg); }
+        60% { transform: rotate(20deg); }
+        80% { transform: rotate(-10deg); }
+        100% { transform: rotate(0deg); }
+      }
+    }
+
+    .arrBtn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      position: absolute;
+      bottom: 0;
+
+      .down {
+        font-size: 20px;
+        color: rgb(46, 46, 228);
+      }
+
+      .arrow {
+        display: inline-block; 
+        animation: bounce 1.5s infinite ease-in-out;
+        color: rgb(45, 45, 247);
+      }
+
+      @keyframes bounce {
+        0%   { transform: translateY(0); }
+        25%  { transform: translateY(10px); }
+        50%  { transform: translateY(0); }
+        75%  { transform: translateY(10px); }
+        100% { transform: translateY(0); }
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+.Projects {
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+
+  .ghPage {
+    background-color: rgb(34, 22, 88);
+    padding: 7px 15px;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    transition: .3s;
+    margin-top: 20px;
+
+    &:hover {
+        background-color: rgb(51, 30, 143);
+    }
+
+    .aLink {
+        text-transform: capitalize;
+    }
+
+    svg {
+        animation: moveX 2s infinite ease-in-out;
+    }
+
+    @keyframes moveX {
+        0%{ transform: translateX(0); }
+        50%{ transform: translateX(15px); }
+        100%{ transform: translateX(0); } 
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+
+  h2 {
+    text-transform: capitalize;
+
+    .prj {
+        color: rgb(46, 46, 228);
+    }
+  }
+
+
+  .projectBox {
+    padding-top: 15px;
+    gap: 10px;
+    .proj {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        .explain {
+            background-color: rgba(81, 131, 240, 0.15);
+            padding: 5px;
+            padding-bottom: 20px;
+            border-radius: 0 0 10px 10px;
+
+            .linkBtns {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+
+                a {
+                    cursor: pointer;
+                    background-color: rgba(8, 1, 39, 0.726);
+                    border-radius: 50%;
+                    padding: 5px;
+                    color: rgb(120, 107, 235);
+                }
+            }
+
+            h3 {
+                text-transform: capitalize;
+                padding: 7px;
+                font-weight: 600;
+            }
+
+            h4 {
+                padding: 7px;
+            }
+        }
+
+        .imgs {
+            aspect-ratio: 2/1;
+            overflow: hidden;
+            border-radius: 10px 10px 0 0;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: .3s;
+            }
+        }
+    }
+  }
+}

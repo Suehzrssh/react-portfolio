@@ -1,0 +1,86 @@
+.App.Dark,
+.App.Light {
+  min-height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* 🌙 Dark mode background */
+.App.Dark {
+  background-image: linear-gradient(to right bottom, rgb(3, 0, 15), rgb(3, 2, 20));
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+/* ☀️ Light mode background */
+.App.Light {
+  background-color: rgb(255, 255, 255);
+  color: rgb(4, 1, 19);
+}
+
+/* ✨ Stars (only visible in Dark mode) */
+.App.Dark .star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 3s infinite alternate;
+  z-index: 0;
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* ☄️ Meteors (only visible in Dark mode) */
+.App.Dark .meteor {
+  position: fixed;
+  top: -100px;
+  width: 3px;
+  height: 100px;
+  opacity: 0.9;
+  transform: rotate(45deg);
+  filter: blur(1px);
+  background: linear-gradient(45deg, rgba(255, 255, 255, 1), transparent);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  animation: fall 3s linear infinite;
+  z-index: 0;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) translateX(0) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120vh) translateX(-300px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* Hide stars and meteors in Light mode */
+.App.Light .star,
+.App.Light .meteor {
+  display: none;
+}
+
+/* Content layer above everything */
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
