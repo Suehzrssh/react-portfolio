@@ -46,7 +46,7 @@ const Projects = () => {
           return (
             <div className="proj p-2" key={key}>
               <div className="imgs h-22">
-                <img src={proj.image} alt={proj.title} />
+                <img src={proj.image} alt={proj.title} loading='lazy' />
               </div>
               <div className="explain w-full">
                 <h3 className='text-xl lap:text-2xl'>{proj.title}</h3>
