@@ -3,13 +3,16 @@ import "../scss/Projects.scss";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PodcastsIcon from '@mui/icons-material/Podcasts';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
+import calculator from "../projects/calculator.png";
+import kitchen from "../projects/kitchen.png";
+import pulse from "../projects/pulse.png";
 
 const projects = [
   {
     id: 1,
     title: "calculator",
     description: "A sleek, customizable calculator designed for everyday use",
-    image: "/projects/calculator.png",
+    image: calculator,
     demoUrl: "#",
     gitHub: "#"
   },
@@ -17,7 +20,7 @@ const projects = [
     id: 2,
     title: "interior design",
     description: "Discover the art of living well through design",
-    image: "/projects/kitchen.png",
+    image: kitchen,
     demoUrl: "#",
     gitHub: "#"
   },
@@ -25,7 +28,7 @@ const projects = [
     id: 3,
     title: "Pulse",
     description: "Perfect for growing businesses ready to take control.",
-    image: "/projects/pulse.png",
+    image: pulse,
     demoUrl: "#",
     gitHub: "#"
   },
